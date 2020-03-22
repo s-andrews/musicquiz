@@ -1,70 +1,62 @@
 [
     {
         "file" : "clips/clip1.mp3",
-        "index" : 302
+        "index" : 1581
     },
     {
         "file" : "clips/clip2.mp3",
-        "index" : 937
+        "index" : 1136
     },
     {
         "file" : "clips/clip3.mp3",
-        "index" : 957
+        "index" : 1582
     },
     {
         "file" : "clips/clip4.mp3",
-        "index" : 971
+        "index" : 1490
     },
     {
         "file" : "clips/clip5.mp3",
-        "index" : 772
+        "index" : 1259
     },
     {
         "file" : "clips/clip6.mp3",
-        "index" : 418
+        "index" : 473
     },
     {
         "file" : "clips/clip7.mp3",
-        "index" : 559
+        "index" : 910
     },
     {
         "file" : "clips/clip8.mp3",
-        "index" : 1392
+        "index" : 650
     },
     {
         "file" : "clips/clip9.mp3",
-        "index" : 779
+        "index" : 1148
     },
     {
         "file" : "clips/clip10.mp3",
-        "index" : 15
+        "index" : 429
     },
     {
         "file" : "clips/clip11.mp3",
-        "index" : 247
+        "index" : 47
     },
     {
         "file" : "clips/clip12.mp3",
-        "index" : 1503
+        "index" : 79
     },
     {
         "file" : "clips/clip13.mp3",
-        "index" : 1393
+        "index" : 1494
     },
     {
         "file" : "clips/clip14.mp3",
-        "index" : 599
+        "index" : 1195
     },
     {
         "file" : "clips/clip15.mp3",
-        "index" : 714
-    },
-    {
-        "file" : "clips/clip16.mp3",
-        "index" : 1307
-    },
-    {
-        "file" : "clips/clip17.mp3",
-        "index" : 1043
+        "index" : 1011
     }
 ]
