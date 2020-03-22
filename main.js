@@ -20,7 +20,6 @@ $(document).ready(function(){
                 allanswers.append("<option value=\""+suggestions[i]["index"]+"\">"+suggestions[i]["name"]+"</option>")
             }
             
-    
             allanswers.select2({width: "10em"})
         });
     
@@ -45,8 +44,40 @@ $(document).ready(function(){
                 }
             }
 
-            alert("Your score was "+score);
+            // Set the colours and scores
+            if (score < 5) {
+                $("#answerdiv").css("background-color","red")
+                $("#sarkycomment").text("Maybe you should pay more attention at the start?")
+            }
+            else if (score < 14) {
+                $("#answerdiv").css("background-color","orange")
+                $("#sarkycomment").text("Not bad, but maybe spare a bit more love for the band.")
+            }
+            else {
+                $("#answerdiv").css("background-color","green")
+                $("#sarkycomment").text("You are truly a musicals geek.")
+
+            }
+
+            $("#finalscore").text(score)
+
+            $("#answerdiv").slideDown();
         });
     });
+
+    // Let them try again if they want to alter their answers
+    $('#changeanswers').click (function() {
+        $('#answerdiv').slideUp();
+    })
+
+    // Reset everything when they opt to play again
+    $('#playagain').click (function() {
+
+        answers = $(".answers");
+        $('#answerdiv').slideUp();
+        window.scrollTo(0, 0);
+
+        setTimeout(location.reload.bind(location), 500);
+    })
 
   }); 

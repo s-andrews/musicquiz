@@ -21,3 +21,23 @@ audio {
     padding: 1em;
     margin: 2em;
 }
+
+#answerdiv {
+    width: 50%;
+    background-color: red;
+    color: white;
+    position: fixed;
+    right: 25%;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-top:4em;
+    padding-bottom: 4em;
+    border-radius: 3em;
+    display: none;
+
+}
+
+.playagain {
+    margin-top: 2em;
+    color: black;
+}
