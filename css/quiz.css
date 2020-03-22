@@ -27,17 +27,39 @@ audio {
     background-color: red;
     color: white;
     position: fixed;
-    right: 25%;
+    left: 25%;
     top: 50%;
     transform: translateY(-50%);
     padding-top:4em;
     padding-bottom: 4em;
+    padding-left: 1em;
+    padding-right: 1em;
     border-radius: 3em;
     display: none;
 
 }
 
+
 .playagain {
     margin-top: 2em;
     color: black;
+}
+
+
+/* Some optimisations for phones */
+@media only screen and (max-width: 800px) {
+    div.clip {
+        font-size: 100%;
+    }
+
+    .btn-success {
+        font-size: 100%;
+        padding: 1em;
+        margin: 1em;
+    }
+
+    #answerdiv {
+        width: 90%;
+        left: 5%;
+    }    
 }
