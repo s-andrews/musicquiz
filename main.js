@@ -6,18 +6,28 @@ $(document).ready(function(){
         //clips is the JSON string
         clipdiv = $("#clips")
 
+        usedIndices = new Set()
+
         for (i=0; i < clips.length; i++) {
+            usedIndices.add(clips[i]["index"])
+            console.log("Added "+clips[i]["index"])
             clipdiv.append("<div class=\"clip text-center\">Clip "+(i+1)+": <audio controls><source src=\""+clips[i]["file"]+"\" type=\"audio/mp3\"></audio> <span class=\"answerlabel\">Answer:</span> <select class=\"answers\"></select></div>")
         }
+
         
+        
+
 
         $.getJSON('suggestions.json', function(suggestions) {
 
             allanswers = $(".answers")
+
             allanswers.append("<option value=\"\"></option>")
 
             for (i=0; i < suggestions.length; i++) {
-                allanswers.append("<option value=\""+suggestions[i]["index"]+"\">"+suggestions[i]["name"]+"</option>")
+                if (usedIndices.has(parseInt(suggestions[i]["index"]))) {
+                    allanswers.append("<option value=\""+suggestions[i]["index"]+"\">"+suggestions[i]["name"]+"</option>")
+                }
             }
             
             allanswers.select2({width: "10em"})
