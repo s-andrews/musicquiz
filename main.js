@@ -27,10 +27,26 @@ $(document).ready(function(){
 
     });
 
-    // Make the suggestions work
-
 
     // Make the answers button work
+    $("#answercheck").click( function() {
+        answers = $(".answers");
 
+        $.getJSON('clips.json', function(clips) {
+            //clips is the JSON string
+            clipdiv = $("#clips")
+    
+            score = 0;
+
+            for (i=0; i < clips.length; i++) {
+                answer = answers.eq(i).val()
+                if (answer == clips[i]["index"]) {
+                    score += 1
+                }
+            }
+
+            alert("Your score was "+score);
+        });
+    });
 
   }); 
