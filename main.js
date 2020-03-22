@@ -29,6 +29,7 @@ $(document).ready(function(){
 
     // Make the answers button work
     $("#answercheck").click( function() {
+        $("#fadediv").show();
         answers = $(".answers");
 
         $.getJSON('clips.json', function(clips) {
@@ -68,6 +69,7 @@ $(document).ready(function(){
     // Let them try again if they want to alter their answers
     $('#changeanswers').click (function() {
         $('#answerdiv').slideUp();
+        $("#fadediv").fadeOut();
     })
 
     // Reset everything when they opt to play again
@@ -75,6 +77,7 @@ $(document).ready(function(){
 
         answers = $(".answers");
         $('#answerdiv').slideUp();
+        $("#fadediv").fadeOut();
         window.scrollTo(0, 0);
 
         setTimeout(location.reload.bind(location), 500);
