@@ -5,12 +5,19 @@
 }
 
 div.clip {
-    font-size: 200%;
+    font-size: 150%;
     padding-top: 1em;
 }
+
 
 audio {
     padding-bottom: 0;
     margin-bottom: -0.4em;
 
+}
+
+.btn-success {
+    font-size: 200%;
+    padding: 1em;
+    margin: 2em;
 }
