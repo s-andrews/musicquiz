@@ -7,7 +7,7 @@ $(document).ready(function(){
         clipdiv = $("#clips")
 
         for (i=0; i < clips.length; i++) {
-            clipdiv.append("<div class=\"clip text-center\">Clip "+(i+1)+": <audio controls><source src=\""+clips[i]["file"]+"\" type=\"audio/mp3\"></audio> Answer: <select class=\"answers\"></select></div>")
+            clipdiv.append("<div class=\"clip text-center\">Clip "+(i+1)+": <audio controls><source src=\""+clips[i]["file"]+"\" type=\"audio/mp3\"></audio> <span class=\"answerlabel\">Answer:</span> <select class=\"answers\"></select></div>")
         }
         
 
@@ -35,13 +35,21 @@ $(document).ready(function(){
         $.getJSON('clips.json', function(clips) {
             //clips is the JSON string
             clipdiv = $("#clips")
+            answerlabels = $(".answerlabel")
     
             score = 0;
 
             for (i=0; i < clips.length; i++) {
                 answer = answers.eq(i).val()
                 if (answer == clips[i]["index"]) {
+                    answerlabels.eq(i).removeClass("wrong")
+                    answerlabels.eq(i).addClass("correct")
                     score += 1
+                }
+                else {
+                    answerlabels.eq(i).removeClass("correct")
+                    answerlabels.eq(i).addClass("wrong")
+
                 }
             }
 

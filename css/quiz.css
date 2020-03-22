@@ -57,6 +57,19 @@ audio {
     color: black;
 }
 
+.wrong {
+    background-color: darkred;
+    color: white;
+    padding: 0.2em;
+}
+
+.correct {
+    background-color: darkgreen;
+    color: white;
+    padding: 0.2em;
+
+}
+
 
 /* Some optimisations for phones */
 @media only screen and (max-width: 800px) {
