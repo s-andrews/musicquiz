@@ -3,3 +3,14 @@
     color: white;
     
 }
+
+div.clip {
+    font-size: 200%;
+    padding-top: 1em;
+}
+
+audio {
+    padding-bottom: 0;
+    margin-bottom: -0.4em;
+
+}
