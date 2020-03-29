@@ -84,6 +84,40 @@ $(document).ready(function(){
         });
     });
 
+
+    $("#showanswers").click( function() {
+
+        // We need a dictionary to be able to look up the 
+        // names of any given id.
+
+        lookup = {}
+
+        all_options = $(".answers").first().children();
+
+        for (i=1;i<all_options.length;i++) {
+            lookup[all_options.eq(i).val()] = all_options.eq(i).text()
+        }
+
+
+        $.getJSON('clips.json', function(clips) {
+            //clips is the JSON string
+            clipdiv = $("#clips")
+            answerlabels = $(".answerlabel")
+    
+            for (i=0; i < clips.length; i++) {
+                answerlabels.eq(i).text(lookup[clips[i]["index"]])
+            }
+        });
+
+        $(".select2").hide();
+        $('#answerdiv').slideUp();
+        $("#fadediv").fadeOut();
+        $("#answercheck").hide();
+
+    });
+
+
+
     // Let them try again if they want to alter their answers
     $('#changeanswers').click (function() {
         $('#answerdiv').slideUp();
